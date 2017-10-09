@@ -1,0 +1,9 @@
+<div class="forum">
+        
+    <form ng-submit="addMessage(newMessage)">
+        <input ng-model="newMessage" type="text" placeholder="Hello!">
+    </form>
+        
+    <div ng-repeat="message in messages track by $index">{{ message.message }} : {{message.time | date: "shortTime"}} </div>
+        
+</div>

@@ -10,12 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular-auth0": "^2.0.0",
-    "auth0-js": "^8.10.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.1",
-    "massive": "^4.3.0",
-    "passport": "^0.4.0",
-    "passport-auth0": "^0.6.0"
+    "massive": "^4.3.0"
   }
 }

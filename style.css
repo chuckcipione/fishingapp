@@ -13,7 +13,7 @@ li {
     height: 25px;
     float: left;
     margin-right: 0px;
-    border-right: 1px solid #aaa;
+    border-right: 1px solid #5E42DB;
     padding: 0 20px;
   }
 
@@ -35,7 +35,7 @@ li {
   }
    
   li a:hover {
-    color: #666;
+    color: #391BBE;
   }
 
 .map {
