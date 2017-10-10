@@ -44,3 +44,16 @@ li {
     margin-left: auto;
     margin-right: auto;
 }
+
+.foruminputs {
+  text-align: center;
+}
+
+.message {
+  width: 500px;
+  height: 40px;
+}
+
+.name {
+  height: 40px;
+}

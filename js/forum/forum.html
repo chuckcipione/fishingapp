@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html ng-app="app">
-        <body ng-controller="forumCtrl">
-                <input type="text" placeholder="Drop a line!" ng-model="newPost">
-                <input type="text" placeholder="Poster Name" ng-model="newPostAuthor">
-                <button ng-click="addPost()">Add Post</button>
-                <div>
-                    Filter: <input type="text" ng-model="filterText">
-                </div>
-                <hr>
-           <p ng-repeat="post in posts | filter: filterText">
-           <span class="text">
-              " {{ post.text }} "
-           </span>
-           <span class="author">
-                {{ post.author }}
-            </span>
-           <button ng-click = "deleteMe(post.text)">X</button>
-           </p>
-        </body>
-</html>
+<html ng-app="quoteBook">
+ <head>
+   <meta charset="utf-8">
+      <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+      <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+   <title></title>
+ </head>
+ <body ng-controller="mainCtrl">
+     <div class='foruminputs'>
+     <input class= 'message' type="text" placeholder="Drop a Line!" ng-model="newQuoteText">
+     <input class='name' type="text" placeholder="User Name" ng-model="newQuoteAuthor">
+     <button ng-click="addQuote()">Post</button>
+     <div>
+         Filter: <input type="text" ng-model="filterText">
+     </div>
+     </div>
+     <hr>
+<p ng-repeat="quote in quotes | filter: filterText">
+<span class="text">
+   " {{ quote.text }} "
+</span>
+<span class="author">
+    {{ quote.author }}
+</span>
+<button ng-click = "deleteMe(quote.text)">X</button>
+</p>
+</body>
 

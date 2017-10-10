@@ -1,19 +1,20 @@
 angular.module('app').controller('forumCtrl', function($scope, forumSrv){
-    $scope.posts = forumSrv.getPosts();
-
+    $scope.quotes = forumSrv.getQuotes();
+    
     $scope.deleteMe = function(textToDelete){
         forumSrv.removeData(textToDelete);
     }
-
-    $scope.addPost = function(){
-        var newPost = {
-            text: $scope.newPostText,
-            author: $scope.newPostAuthor
+    
+    $scope.addQuote = function(){
+        var newQuote = {
+            text: $scope.newQuoteText,
+            author: $scope.newQuoteAuthor
         }
-        if(forumSrv.addData(newPost))
+        if(forumSrv.addData(newQuote))
         {
-            $scope.newPostText = '';
-            $scope.newPostAuthor = '';
+            $scope.newQuoteText = '';
+            $scope.newQuoteAuthor = '';
         }
     }
-})
+    
+    })
