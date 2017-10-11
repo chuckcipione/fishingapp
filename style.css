@@ -1,3 +1,29 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/andrey-trusov-15106.jpg);
+  background-size: cover;
+}
+
+.title {
+  font-family: 'Indie Flower', cursive;
+  font-size: 50px;  
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+
+.logo {
+  height: 150px;
+  margin-right: 10%;
+  margin-top: .5%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -23,7 +49,7 @@ li {
    
   li a {
     text-decoration: none;
-    color: #ccc;
+    color: black;
     font: 25px/1 Helvetica, Verdana, sans-serif;
     text-transform: uppercase;
    
@@ -35,7 +61,7 @@ li {
   }
    
   li a:hover {
-    color: #391BBE;
+    color: white;
   }
 
 .map {
@@ -56,4 +82,17 @@ li {
 
 .name {
   height: 40px;
+}
+
+.text {
+  font-size: 24px;
+  margin-left: 3%;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid;
+}
+
+.author {
+  font-size: 24px;
+  font-weight: normal;
+  border: 1px solid;
 }

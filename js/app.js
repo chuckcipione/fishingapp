@@ -17,6 +17,11 @@ angular.module('app', ['ui.router'])
             templateUrl: 'js/forum/forum.html',
             controller: 'forumCtrl'
         })
+        .state('log', {
+            url: '/log',
+            templateUrl: 'js/log/log.html',
+            controller: 'logCtrl'
+        })
         .state('about', {
             url: '/about',
             templateUrl: 'js/about/about.html',
