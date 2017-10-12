@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router'])
+angular.module('app', ['ui.router', 'ngFileUpload'])
 .config(($stateProvider, $urlRouterProvider, $httpProvider) => {
     $urlRouterProvider.otherwise('/');
     $stateProvider

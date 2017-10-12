@@ -1,8 +1,23 @@
 <!DOCTYPE html>
 <html class='background' ng-app='app'>
     <head>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+        <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyBmaiKDxS6b2EnsplG3sMji0pS272gaFXk",
+                authDomain: "fishing-app-5a91b.firebaseapp.com",
+                databaseURL: "https://fishing-app-5a91b.firebaseio.com",
+                projectId: "fishing-app-5a91b",
+                storageBucket: "gs://fishing-app-5a91b.appspot.com/",
+                messagingSenderId: "611576674381"
+            };
+            firebase.initializeApp(config);
+        </script>
     </head>
     <body>
             <nav-directive></nav-directive>
@@ -18,6 +33,9 @@
     <script src="./js/map/mapCtrl.js"></script>
     <script src="./js/forum/forumCtrl.js"></script>
     <script src="./js/forum/forumSrv.js"></script>
+    <script src="./js/log/logCtrl.js"></script>
+    <script src="./js/log/logSrv.js"></script>
     <script src="./js/about/aboutCtrl.js"></script>
     <script src="./js/nav/nav.js"></script>
+    <script src="./js/ng-file-upload.js"></script>
 </html>
