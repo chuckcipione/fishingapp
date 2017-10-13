@@ -2,4 +2,6 @@
         <img style="width: 300px;" ngf-thumbnail="image">
         <button name="image" ngf-select ng-model="image">Upload image</button>
         <button ng-click="submit(image)">Submit</button>
-    </form>
+        <div ng-repeat="image in image_url"></div>
+        <div ng-src="{{ image.image_url }}"></div>
+</form>
