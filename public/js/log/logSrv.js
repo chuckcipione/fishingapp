@@ -14,8 +14,9 @@ angular.module('app').service('logSrv', function($http){
     
         }, function() {
             let downloadURL = [uploadTask.snapshot.downloadURL];
+            this.downloadURL = downloadURL;
             console.log(downloadURL)
-            return $http.post(`/log`, downloadURL);
+            return $http.post('/log', downloadURL);
             });
     
     }
