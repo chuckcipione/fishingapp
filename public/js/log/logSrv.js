@@ -20,4 +20,15 @@ angular.module('app').service('logSrv', function($http){
             });
     
     }
+
+
+    this.getData = () => {
+        return $http.get('api/log').then(response => {
+            console.log("hello from logSrv", response)
+            return response
+        })
+    }
+
+
+
 })

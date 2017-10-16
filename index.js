@@ -27,6 +27,15 @@ app.post('/log', (req, res) => {
       .upload_pic(req.body)
   });
 
+  app.get('/api/log', (req, res) => {
+    const db = req.app.get('db');
+
+    db.getData(req.body)
+    .then(response => {
+        return res.json(response)
+    })
+})
+
 app.listen(port, function() {
 console.log(`Server listening on port: ${port}`);
 });

@@ -1,7 +1,10 @@
 <form name="form">
         <img style="width: 300px;" ngf-thumbnail="image">
-        <button name="image" ngf-select ng-model="image">Upload image</button>
-        <button ng-click="submit(image)">Submit</button>
-        <div ng-repeat="image in image_url"></div>
-        <div ng-src="{{ image.image_url }}"></div>
+        <button class="upload" name="image" ngf-select ng-model="image">Upload image</button>
+        <button class="submit" ng-click="submit(image)">Submit</button>
 </form>
+<div ng-repeat="info in data"></div>
+
+<div ng-repeat="image in images">
+        <img ng-src="{{image.image_url}}" alt="nah" style:"max-width:500px">
+</div>
