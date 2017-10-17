@@ -3,8 +3,13 @@
         <button class="upload" name="image" ngf-select ng-model="image">Upload image</button>
         <button class="submit" ng-click="submit(image)">Submit</button>
 </form>
+<br>
+<br>
+<br>
 <div ng-repeat="info in data"></div>
-
-<div ng-repeat="image in images">
-        <img ng-src="{{image.image_url}}" alt="nah" style:"max-width:500px">
+<div class="outer">
+        <!-- <div ng-repeat="image in images"> -->
+        <!-- <div ng-style="{'background-image': 'url(' + image.image_url + ')'}"></div> -->
+        <img class="imageupload" ng-repeat="image in images" ng-src="{{ image.image_url }}" alt="nah">
+        <!-- </div> -->
 </div>

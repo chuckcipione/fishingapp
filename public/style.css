@@ -1,8 +1,8 @@
 .background {
   width: 100vw;
   height: 100vh;
-  background-image: url(/images/andrey-trusov-15106.jpg);
-  background-size: cover;
+  background-image: url(/images/manu-schwendener-39728.jpg);
+  background-size: cover no-repeat;
 }
 
 .title {
@@ -85,6 +85,7 @@ li {
 }
 
 .text {
+  color: #4B4747;
   font-size: 24px;
   margin-left: 3%;
   font-family: Arial, Helvetica, sans-serif;
@@ -92,6 +93,7 @@ li {
 }
 
 .author {
+  color: #4B4747;
   font-size: 24px;
   font-weight: normal;
   /* border: 1px solid; */
@@ -127,4 +129,22 @@ li {
 .submit:hover {
   background-color: white;
   color: black;
+}
+
+.outer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.imageupload {
+  padding: 5%;
+  max-width: 302px;
+  max-height: 302px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 32%;
+  height: 32%;
 }
