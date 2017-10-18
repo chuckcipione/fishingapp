@@ -25,6 +25,9 @@ app.post('/log', (req, res) => {
     req.app
       .get('db')
       .upload_pic(req.body)
+      .then(reload => {
+          res.json(reload);
+      })
   });
 
   app.get('/api/log', (req, res) => {

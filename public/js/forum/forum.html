@@ -19,9 +19,9 @@
 		</form>
 
 		<div ng-repeat="post in posts | filter:postFilter track by $index" class="postContainer">
-			<span class="postText">"{{post.text}}"</span>
+			<span class="postText">"{{post.text}}" </span>
 			<span class="postAuthor">{{post.author}}</span>
-            <button ng-click = "removePost(post.text)">X</button>
+            <button ng-click="removePost(post.text)">X</button>
 		</div>
 	</section>	
 </body>

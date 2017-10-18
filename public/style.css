@@ -67,7 +67,7 @@ li {
 .wrapper {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 20%;
   width: 500px;
   transform: translate(-50%,-50%);
   border-radius: 5px;
@@ -136,6 +136,22 @@ li {
 }
 
 .submit:hover {
+  background-color: white;
+  color: black;
+}
+
+.reload {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.reload:hover {
   background-color: white;
   color: black;
 }

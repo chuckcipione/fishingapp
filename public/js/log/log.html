@@ -1,7 +1,8 @@
 <form name="form">
         <img style="width: 300px;" ngf-thumbnail="image">
         <button class="upload" name="image" ngf-select ng-model="image">Upload image</button>
-        <button class="submit" ng-click="submit(image)">Submit</button>
+        <button class="submit" ng-click="submit(image); reload()">Submit</button>
+        <!-- <button class="reload" ng-click="reload()">Reload</button> -->
 </form>
 <br>
 <br>

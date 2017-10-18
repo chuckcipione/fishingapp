@@ -1,4 +1,5 @@
-angular.module('app').service('logSrv', function($http){
+angular.module('app').service('logSrv', function($http, $state){
+    var logSrv = this;
     this.uploadImage = (file) => {
         const storageRef = firebase.storage().ref();
         const uploadTask = storageRef.child('images/' + file.name).put(file);
@@ -16,7 +17,10 @@ angular.module('app').service('logSrv', function($http){
             let downloadURL = [uploadTask.snapshot.downloadURL];
             this.downloadURL = downloadURL;
             console.log(downloadURL)
-            return $http.post('/log', downloadURL);
+            $http.post('/log', downloadURL)
+            .then(function(res){
+                $state.reload("log")
+            })
             });
     
     }
