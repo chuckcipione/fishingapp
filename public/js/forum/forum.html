@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html ng-app="app">
-<!-- <head>
-	<link rel="stylesheet" href="./css/styles.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-	<link href="https://file.myfontastic.com/t48Tj2AF7s9urszhMfQ8w7/icons.css" rel="stylesheet">
 
-
-</head> -->
 <body ng-controller="forumCtrl">
-
-
-	<header></header>
 	
-	<section id="input_console">
+	<section class="border">
 		<form class="form-inline">
 			<div class="filterConsole form-group">
 				<input class="form-control" placeholder="Filter by Post" ng-model="postFilter.text">
@@ -27,9 +17,7 @@
                 <button ng-click="addPost()">Post</button>
 			</div>
 		</form>
-	</section>
 
-	<section>
 		<div ng-repeat="post in posts | filter:postFilter track by $index" class="postContainer">
 			<span class="postText">"{{post.text}}"</span>
 			<span class="postAuthor">{{post.author}}</span>
