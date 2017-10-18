@@ -22,9 +22,9 @@ angular.module('app', ['ui.router', 'ngFileUpload'])
             templateUrl: 'js/log/log.html',
             controller: 'logCtrl'
         })
-        .state('about', {
-            url: '/about',
-            templateUrl: 'js/about/about.html',
-            controller: 'aboutCtrl'
-        })
+        // .state('about', {
+        //     url: '/about',
+        //     templateUrl: 'js/about/about.html',
+        //     controller: 'aboutCtrl'
+        // })
 });

@@ -62,7 +62,40 @@ li {
    
   li a:hover {
     color: white;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  transform: translate(-50%,-50%);
+  border-radius: 5px;
+}
+
+.fish {
+  position: relative;
+  width: 1px;
+  left: 0;
+  animation: fish 5s infinite;
+}
+
+.icon {
+  transform: scaleX(-1);
+}
+
+@keyframes fish {
+  49% {
+      left: calc(100% - 1em);
+      transform: scaleX(1);        
   }
+  50% {
+      transform: scaleX(-1);
+  }
+  100% {
+      transform: scaleX(-1);
+  }
+}
 
 .map {
     text-align: center;
@@ -71,7 +104,7 @@ li {
     margin-right: auto;
 }
 
-.foruminputs {
+/* .foruminputs {
   text-align: center;
 }
 
@@ -85,7 +118,7 @@ li {
 }
 
 .text {
-  color: #4B4747;
+  color: black;
   font-size: 24px;
   margin-left: 3%;
   font-family: Arial, Helvetica, sans-serif;
@@ -93,11 +126,10 @@ li {
 }
 
 .author {
-  color: #4B4747;
+  color: black;
   font-size: 24px;
   font-weight: normal;
-  /* border: 1px solid; */
-}
+} */
 
 .upload {
   background-color: blue;

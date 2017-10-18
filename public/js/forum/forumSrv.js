@@ -1,25 +1,32 @@
 angular.module('app').service('forumSrv', function(){
-    var quotes = [
-        { text: 'There\'s a fine line between fishing and standing on the shore like an idiot.', author: 'Chuck Cipione'}
-      ];
-    
-      this.getQuotes = function(){
-        return quotes;
-    };
+	var posts = [];
+	if(localStorage.posts) {
+		posts = JSON.parse(localStorage.getItem("posts"));
+	} else {
+		posts = 
+		[
+            { text: 'There\'s a fine line between fishing and standing on the shore like an idiot.', author: 'Chuck Cipione'}   
+		];
+	}
+	
 
-    this.addData = function(newQuote){
-        if(newQuote.text && newQuote.author){
-            quotes.push(newQuote);
-            return true;
-        }
-        return false;
-    };
+	this.getPosts = function() {
+		return posts;
+	};
 
-    this.removeData = function(textToRemove){
-        for(var i = 0; i < quotes.length; i++){
-            if(quotes[i].text.toLowerCase() === textToRemove.toLowerCase()){
-                quotes.splice(i--, 1);
-            }
-        }
-    };
-});
+	this.addPost = function(post, author) {
+		posts.unshift({text:post, author:author});
+		localStorage.setItem('posts', JSON.stringify(posts));
+	};
+
+	this.removePost = function(post) {
+		for(var i = 0; i < posts.length; i++) {
+			if(posts[i].text == post) {
+				posts.splice(i, 1);
+				break;
+			}
+		}
+		localStorage.setItem('posts', JSON.stringify(posts));
+	};
+
+})
