@@ -1,6 +1,12 @@
-<section>
+<!-- <section>
     <div class='about'>
         Texas has become a top fishing destinations for tourists both because of the excellent freshwater reservoirs and streams filled with largemouth bass, smallmouth bass and catfish and because of the superb red drum and spotted seatrout fishery along the coast. Indeed as the Texas population grows, the interest in fishing has grown as well.            
     </div>
-</section>
+</section> -->
+
+            <div id='map-canvas' align="left" style='border: 1px solid silver; height: 300px; width: 50%;'></div>
+            <script src="http://www.google.com/jsapi"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
+            <script src="http://fishmap.org/api/HUVYHxnNqcAGpjDnQcga/species/largemouth-bass/state/TX.html"></script>
+            <script>google.maps.event.addDomListener(window, 'load', initialize);</script>
 

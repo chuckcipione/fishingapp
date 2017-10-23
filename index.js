@@ -1,12 +1,14 @@
 express = require('express'),
 cors = require('cors'),
 bodyParser = require('body-parser'),
-port = 3000,
+port = 80,
 app = express(),
 serverConfig = require('./public/js/log/config'),
 // logCtrl = require('./js/log/logCtrl.js'),
-massive = require('massive'),
-connectionString = serverConfig.connectionString;
+massive = require('massive');
+// connectionString = serverConfig.connectionString;
+
+const connectionString = 'postgres://opszgoahkklwor:ddca78482a1fa9fecab88d0fcff4d8ef0a9db9513a21eb6da2462cb017538269@ec2-54-235-250-15.compute-1.amazonaws.com:5432/da8nllmigs6avn?ssl=true';
 
 massive(connectionString).then(db => {
 app.set('db', db);

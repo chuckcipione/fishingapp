@@ -7,12 +7,12 @@
 		<form class="form-inline">
 			<div class="filterConsole form-group">
 				<input class="form-control" placeholder="Filter by Post" ng-model="postFilter.text">
-	        	<input class="form-control" placeholder="Filter by Author" ng-model="postFilter.author">
+	        	<input class="form-control" placeholder="Filter by User" ng-model="postFilter.author">
 
 			</div>
 
 			<div class="postContainer">
-				<input class="newText" ng-model="newPost.text" placeholder="Post"/>
+				<input class="newText" ng-model="newPost.text" placeholder="Drop a Line!"/>
 				<input ng-model="newPost.author" placeholder="Username">
                 <button ng-click="addPost()">Post</button>
 			</div>

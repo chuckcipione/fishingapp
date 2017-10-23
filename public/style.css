@@ -64,6 +64,10 @@ li {
     color: white;
 }
 
+.home {
+  font-family: 'Indie Flower', cursive;  
+}
+
 .wrapper {
   position: absolute;
   left: 50%;
